@@ -50,8 +50,5 @@ class Car extends Builder {
   }
 }
 
-const car = new Car({ of: 'tanna' })
-  .withType('@builder/car')
-  .setColor('red')
-  .toJson();
+const car = new Car({ of: 'tanna' }).withType('@builder/car').setColor('red');
 console.log(car);
