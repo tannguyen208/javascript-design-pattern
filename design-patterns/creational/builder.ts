@@ -50,5 +50,21 @@ class Car extends Builder {
   }
 }
 
-const car = new Car({ of: 'tanna' }).withType('@builder/car').setColor('red');
+class Motobike extends Builder {
+  color: string;
+
+  setColor(color) {
+    this.color = color;
+    return this;
+  }
+}
+
+const car = new Car({ of: 'tanna' })
+  .withType('@builder/car')
+  .setColor('black-pink');
 console.log(car);
+
+const motobike = new Motobike({ of: 'tanna' })
+  .withType('@builder/motobike')
+  .setColor('yellow');
+console.log(motobike);
